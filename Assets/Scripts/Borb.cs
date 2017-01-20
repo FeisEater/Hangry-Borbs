@@ -5,6 +5,7 @@ using UnityEngine;
 public class Borb : MonoBehaviour {
     public float rotationSpeed;
     public float moveSpeed;
+    public string keyName;
 
     private bool clockwise;
 	// Use this for initialization
@@ -14,7 +15,7 @@ public class Borb : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!Input.GetButton("Fire1"))
+        if (!Input.GetButton(keyName))
         {
             transform.Translate(Vector3.up * moveSpeed);
             if (clockwise)
@@ -22,7 +23,7 @@ public class Borb : MonoBehaviour {
             else
                 transform.Rotate(Vector3.forward, rotationSpeed);
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(keyName))
         {
             clockwise = !clockwise;
         }
