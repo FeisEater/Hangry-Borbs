@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4218480539440650}
   - component: {fileID: 212120678585203382}
-  - component: {fileID: 114431384466591420}
+  - component: {fileID: 114633262948218066}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114431384466591420
+--- !u!114 &114633262948218066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0562fe8e5c99fe941931bd6f11fea786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 0
-  defaultWaveSpeed: 5
+  waveSpeed: 5
 --- !u!212 &212120678585203382
 SpriteRenderer:
   m_ObjectHideFlags: 1
