@@ -53,7 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  moveSpeed: 0.1
+  moveSpeed: 8
+  playerId: 0
+  rightBorder: 1920
+  leftBorder: 64
+  topBorder: 1048
+  bottomBorder: 32
 --- !u!212 &212866382286495916
 SpriteRenderer:
   m_ObjectHideFlags: 1
