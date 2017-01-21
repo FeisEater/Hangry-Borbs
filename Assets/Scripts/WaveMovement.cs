@@ -87,6 +87,7 @@ public class WaveMovement : MonoBehaviour {
                 { "ananas", 5 },
                 { "kotilo", 1 },
                 { "kenkä", 1 },
+                { "sixpack", Random.value < 0.3f ? 1 : 0}
             };
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
