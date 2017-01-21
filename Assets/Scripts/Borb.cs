@@ -23,6 +23,7 @@ public class Borb : MonoBehaviour {
     private bool stunned;
     private float curStunTime;
     private bool stopped;
+    [HideInInspector] public Vector3 storedOffset;
 
 	// Use this for initialization
 	void Start () {

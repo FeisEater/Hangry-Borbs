@@ -10,6 +10,7 @@ public class Food : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         consumers = new ArrayList();
+        GetComponent<Collider2D>().isTrigger = true;
 	}
 	
 	// Update is called once per frame

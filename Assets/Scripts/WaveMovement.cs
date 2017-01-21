@@ -79,7 +79,6 @@ public class WaveMovement : MonoBehaviour {
             Item[] oneWaveItems = FindObjectsOfType<Item>();
             foreach (Item obstacle in oneWaveItems)
             {
-                Debug.Log("despawn");
                 if (obstacle.isOneWaveItem) Destroy(obstacle.gameObject);
             }
 
