@@ -26,9 +26,12 @@ public class pisteet : MonoBehaviour {
             Destroy(collision.gameObject);
         }
 
-        while (collision.gameObject.tag == "kotilo")
+        if (collision.gameObject.tag == "kotilo")
         {
-
+            if (kotiloaika < 2)
+            {
+                return;
+            }
             if (kotiloaika == 2)
             {
                 points += 50;

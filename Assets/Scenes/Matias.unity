@@ -91,6 +91,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &811400664
 Prefab:
   m_ObjectHideFlags: 0
@@ -176,6 +177,9 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 08479c751e607bf41b96fdb8625c1861, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1143175129
+=======
+--- !u!1001 &1236039770
+>>>>>>> fd6e6b4a80ba4eeafcda4e26732df7f27c24d31c
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -184,11 +188,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 592
       objectReference: {fileID: 0}
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.y
       value: 221
+=======
+      value: 970
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 571
+>>>>>>> fd6e6b4a80ba4eeafcda4e26732df7f27c24d31c
       objectReference: {fileID: 0}
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -214,9 +226,45 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
   m_IsPrefabParent: 0
+=======
+    - target: {fileID: 114779373328331874, guid: 79c408b50ca5bb34fa3459925b7cee51,
+        type: 2}
+      propertyPath: playerId
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1449360296 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1524044138960434, guid: 79c408b50ca5bb34fa3459925b7cee51,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236039770}
+--- !u!50 &1449360297
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1449360296}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+>>>>>>> fd6e6b4a80ba4eeafcda4e26732df7f27c24d31c
 --- !u!1001 &1784399470
 Prefab:
   m_ObjectHideFlags: 0
