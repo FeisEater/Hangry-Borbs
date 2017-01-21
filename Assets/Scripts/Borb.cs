@@ -112,6 +112,12 @@ public class Borb : MonoBehaviour {
             else
                 force = ramForce;
             coll.rigidbody.AddForce((coll.transform.position - transform.position).normalized * force, ForceMode2D.Impulse);
-        }
+		} 
+		else if (coll.gameObject.tag == "Obstacle"){
+			float force = collisionForce;
+			force = ramForce;
+			gameObject.GetComponent<Rigidbody2D>().AddForce(
+				(Vector2)(transform.position - coll.transform.position).normalized * force, ForceMode2D.Impulse);
+		}
     }
 }
