@@ -47,7 +47,6 @@ public class Borb : MonoBehaviour {
         HandleButton();
         CheckBorder();
         CheckWave();
-        Debug.Log(points);
     }
 
     void HandleButton()

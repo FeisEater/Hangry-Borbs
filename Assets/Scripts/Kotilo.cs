@@ -8,7 +8,6 @@ public class Kotilo : MonoBehaviour {
 	void Start () {
         if (Random.value < crabProbability)
         {
-            Debug.Log("hehe");
             GetComponent<Food>().points = 0;
             GetComponent<Item>().isOneWaveItem = true;
         }
