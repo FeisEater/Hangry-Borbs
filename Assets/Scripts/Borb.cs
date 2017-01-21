@@ -10,24 +10,43 @@ public class Borb : MonoBehaviour {
     public float leftBorder;
     public float topBorder;
     public float bottomBorder;
+    public float collisionForce;
+    public float ramForce;
+    public float stunTime;
 
     private bool clockwise;
     private string keyName;
+    private bool stunned;
+    private float curStunTime;
+    private bool stopped;
 
 	// Use this for initialization
 	void Start () {
         clockwise = true;
         keyName = "Player" + playerId;
+        stunned = false;
     }
 
     // Update is called once per frame
     void Update () {
+        if (curStunTime > 0)
+        {
+            curStunTime -= Time.deltaTime;
+        }
+        else
+        {
+            stunned = false;
+            GetComponent<Rigidbody2D>().angularVelocity = 0;
+        }
         HandleButton();
         CheckBorder();
     }
 
     void HandleButton()
     {
+        if (stunned)
+            return;
+        stopped = Input.GetButton(keyName);
         if (!Input.GetButton(keyName))
         {
             transform.Translate(Vector3.up * moveSpeed);
@@ -63,6 +82,22 @@ public class Borb : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, topBorder, 0);
             transform.rotation = Quaternion.Euler(0, 0, 180 - transform.rotation.eulerAngles.z);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            float force = collisionForce;
+            if (!coll.gameObject.GetComponent<Borb>().stopped)
+            {
+                stunned = true;
+                curStunTime = stunTime;
+            }
+            else
+                force = ramForce;
+            coll.rigidbody.AddForce((coll.transform.position - transform.position).normalized * force, ForceMode2D.Impulse);
         }
     }
 }
