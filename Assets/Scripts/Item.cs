@@ -18,4 +18,7 @@ public class Item : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.white, time);
         }
     }
+	public void DestroyThisItem(){
+		Destroy (gameObject);
+	}
 }

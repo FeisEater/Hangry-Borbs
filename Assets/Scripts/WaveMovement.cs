@@ -78,12 +78,17 @@ public class WaveMovement : MonoBehaviour {
         {
             Dictionary<string, int> items = new Dictionary<string, int>()
             {
-                { "unused/boot", 2 },
-                { "unused/poop", 3 },
-                { "unused/fish", 1 },
+                { "unused/boot", 0 },
+                { "unused/poop", 0 },
+                { "unused/fish", 0 },
             };
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
+
+			GameObject[] oneWaveItems = GameObject.FindGameObjectsWithTag("OneWaveItem");
+			for (int i = 0; i < oneWaveItems.Length; i++) {
+				oneWaveItems [i].GetComponent<Item> ().DestroyThisItem ();
+			}
         }
         return -pos;
 	}

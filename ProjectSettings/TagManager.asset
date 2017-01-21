@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+<<<<<<< HEAD
   - ananas
   - kotilo
+=======
+  - Obstacle
+>>>>>>> 5d9012b564c7975efae8db9cf406701130122852
   layers:
   - Default
   - TransparentFX
