@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Borb : MonoBehaviour {
     public float rotationSpeed;
@@ -14,6 +15,7 @@ public class Borb : MonoBehaviour {
     public float ramForce;
     public float collisionStunTime;
     public float waveWashStunTime;
+    public Text Scoretext;
 
     [HideInInspector] public int points;
     private bool clockwise;
@@ -21,6 +23,8 @@ public class Borb : MonoBehaviour {
     private bool stunned;
     private float curStunTime;
     private bool stopped;
+    [HideInInspector] public Vector3 storedOffset;
+    [HideInInspector] public bool dontCollide;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +32,11 @@ public class Borb : MonoBehaviour {
         keyName = "Player" + playerId;
         stunned = false;
         points = 0;
+<<<<<<< HEAD
+        Scoretext.text = "testi";
+=======
+        dontCollide = false;
+>>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
     }
 
     // Update is called once per frame
@@ -44,6 +53,7 @@ public class Borb : MonoBehaviour {
         HandleButton();
         CheckBorder();
         CheckWave();
+        Scoretext.text = playerId + "'s score: " + points;
     }
 
     void HandleButton()
@@ -102,7 +112,7 @@ public class Borb : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player" && !coll.gameObject.GetComponent<Borb>().dontCollide && !dontCollide)
         {
             float force = collisionForce;
             if (!coll.gameObject.GetComponent<Borb>().stopped)
@@ -125,8 +135,13 @@ public class Borb : MonoBehaviour {
 		}
     }
 
+    
+
     public bool CanEat()
     {
-        return stopped && !stunned;
+        return stopped && !stunned && !dontCollide;
     }
+
+
+    
 }
