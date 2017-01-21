@@ -76,19 +76,22 @@ public class WaveMovement : MonoBehaviour {
 
         if (waveTime > 0.5f && !spawnedItems)
         {
+            Item[] oneWaveItems = FindObjectsOfType<Item>();
+            foreach (Item obstacle in oneWaveItems)
+            {
+                Debug.Log("despawn");
+                if (obstacle.isOneWaveItem) Destroy(obstacle.gameObject);
+            }
+
             Dictionary<string, int> items = new Dictionary<string, int>()
             {
                 { "ananas", 5 },
                 { "kotilo", 1 },
-                { "unused/boot", 1 },
+                { "kenkä", 1 },
             };
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
 
-			/*GameObject[] oneWaveItems = GameObject.FindGameObjectsWithTag("OneWaveItem");
-			for (int i = 0; i < oneWaveItems.Length; i++) {
-				oneWaveItems [i].GetComponent<Item> ().DestroyThisItem ();
-			}*/
         }
         return -pos;
 	}

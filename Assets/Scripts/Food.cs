@@ -30,13 +30,13 @@ public class Food : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.GetComponent<Borb>() != null)
             consumers.Add(coll.gameObject.GetComponent<Borb>());
     }
 
     void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.GetComponent<Borb>() != null)
             consumers.Remove(coll.gameObject.GetComponent<Borb>());
     }
 }
