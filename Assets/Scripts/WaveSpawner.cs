@@ -57,6 +57,5 @@ public class WaveSpawner : MonoBehaviour {
 
 	void SpawnWave(){
 		wave = (GameObject)Instantiate(Resources.Load("Wave"));
-		wave.transform.Translate(new Vector3(0, 1080, 0));
 	}
 }
