@@ -7,9 +7,12 @@ public class WaveMovement : MonoBehaviour {
 	public float waveSpeed;
 	public float waveLength;
 	private float startTime;
+	public const float startPosition = 1080 + 100;
+
 	private bool waving;
 	private bool waveDirectionFlag;
     private bool spawnedItems;
+	private GameObject foam;
 
 	/// <summary>
 	/// Call this when you want to do a wave. Attatch this to a wave-gameobject
@@ -37,26 +40,34 @@ public class WaveMovement : MonoBehaviour {
 		waving = false;
 		waveDirectionFlag = true;
 		waveLength = 1;
-		gameObject.transform.position = new Vector3 (0, 1080, 0);
+		gameObject.transform.position = new Vector3 (0, startPosition, 0);
+		if (foam != null) {
+			Destroy (foam);
+		}
+		foam = (GameObject)Instantiate(Resources.Load("Foam"));
+		foam.transform.position = gameObject.transform.position;
+		foam.transform.parent = gameObject.transform;
 	}
 
 	void FixedUpdate () {
 		if (waving) {
 			float y = GetWavePosition ();
-			gameObject.transform.Translate (new Vector3 (0, -y, 0));
+			Vector3 position = gameObject.transform.position + new Vector3 (0, y, 0);
+			gameObject.transform.position = position;
 		}
 	}
 
 	//calculates the y-position of the wave-gameobject
 	float GetWavePosition(){		
 		float waveTime = Time.time - startTime;
-		float length = 10.8f * waveLength;
+		float length = (startPosition / 100) * waveLength;
 		float modifier = Mathf.Sin (waveTime * waveSpeed);
 
 		float pos = modifier * length * waveSpeed;
 
 		if (pos < 0) {
 			waveDirectionFlag = false;
+			foam.GetComponent<Fade> ().StartFade ();
 		}
 		if (waveDirectionFlag == false && pos > 0) {
 			pos = 0;
@@ -74,6 +85,6 @@ public class WaveMovement : MonoBehaviour {
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
         }
-        return pos;
+        return -pos;
 	}
 }
