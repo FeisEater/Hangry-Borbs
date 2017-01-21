@@ -13,7 +13,7 @@ public class WaveMovement : MonoBehaviour {
 	/// <summary>
 	/// Call this when you want to do a wave. Attatch this to a wave-gameobject
 	/// </summary>
-	/// <param name="length of the wave. float between 0 and 1.">Length.</param>
+	/// <param name="Length">Length of the wave. float between 0 and 1.</param>
 	public void DoTheWave(float length){
 		SetDefaults ();
 		waveLength = length;
