@@ -43,6 +43,7 @@ public class WaveMovement : MonoBehaviour {
 			float y = GetWavePosition ();
 			gameObject.transform.Translate (new Vector3 (0, -y, 0));	
 		}
+        TestSpawn();
 	}
 
 	//calculates the y-position of the wave-gameobject
@@ -62,4 +63,18 @@ public class WaveMovement : MonoBehaviour {
 		}
 		return pos;
 	}
+
+    void TestSpawn()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Dictionary<string, int> items = new Dictionary<string, int>()
+            {
+                { "unused/boot", 5 },
+                { "unused/poop", 10 },
+                { "unused/fish", 3 },
+            };
+            ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - 256, items);
+        }
+    }
 }
