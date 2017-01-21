@@ -31,6 +31,7 @@ public class Borb : MonoBehaviour {
         keyName = "Player" + playerId;
         stunned = false;
         points = 0;
+        Scoretext.text = "testi";
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class Borb : MonoBehaviour {
         HandleButton();
         CheckBorder();
         CheckWave();
+        Scoretext.text = playerId + "'s score: " + points;
     }
 
     void HandleButton()
@@ -128,19 +130,13 @@ public class Borb : MonoBehaviour {
 		}
     }
 
+    
+
     public bool CanEat()
     {
         return stopped && !stunned;
     }
 
-    public void AddScore(int newScoreValue)
-    {
-        points += newScoreValue;
-        UpdateScore();
-    }
 
-    void UpdateScore()
-    {
-        Scoretext.text = playerId + "'s Score: " + points;
-    }
+    
 }
