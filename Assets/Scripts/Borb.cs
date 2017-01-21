@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Borb : MonoBehaviour {
     public float rotationSpeed;
@@ -14,6 +15,7 @@ public class Borb : MonoBehaviour {
     public float ramForce;
     public float collisionStunTime;
     public float waveWashStunTime;
+    public Text Scoretext;
 
     [HideInInspector] public int points;
     private bool clockwise;
@@ -128,5 +130,16 @@ public class Borb : MonoBehaviour {
     public bool CanEat()
     {
         return stopped && !stunned;
+    }
+
+    public void AddScore(int newScoreValue)
+    {
+        points += newScoreValue;
+        UpdateScore();
+    }
+
+    void UpdateScore()
+    {
+        Scoretext.text = playerId + "'s Score: " + points;
     }
 }
