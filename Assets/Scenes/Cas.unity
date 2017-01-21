@@ -100,11 +100,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 756
+      value: 585.1
       objectReference: {fileID: 0}
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 396
+      value: 404.6
       objectReference: {fileID: 0}
     - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -130,43 +130,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4565966099735688, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212866382286495916, guid: 79c408b50ca5bb34fa3459925b7cee51,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79c408b50ca5bb34fa3459925b7cee51, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &665144355 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1524044138960434, guid: 79c408b50ca5bb34fa3459925b7cee51,
-    type: 2}
-  m_PrefabInternal: {fileID: 649803347}
---- !u!50 &665144361
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 665144355}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1183997348
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +245,48 @@ Prefab:
     - {fileID: 114735542241117422, guid: 08479c751e607bf41b96fdb8625c1861, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 08479c751e607bf41b96fdb8625c1861, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1399139137
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 317
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 386
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271687264657822, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 311b393933d487841bb8615cff2e8054, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1417028362
 Prefab:
   m_ObjectHideFlags: 0
@@ -390,6 +398,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b1369073ee9e54199d08cb38d370d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxWaveTime: 0
+  minWaveTime: 0
+  comboProbability: 0
+  maxCombo: 0
+  minCombo: 0
+  minWaveLength: 0
+  maxWaveLength: 0
 --- !u!4 &2051016257
 Transform:
   m_ObjectHideFlags: 0

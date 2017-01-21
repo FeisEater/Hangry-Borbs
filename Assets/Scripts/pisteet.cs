@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class pisteet : MonoBehaviour {
 
-    public float kotiloaika;
+    public int kotiloaika;
     public int points;
- 
+    
 
     // Use this for initialization
     void Start () {
@@ -14,6 +14,7 @@ public class pisteet : MonoBehaviour {
         points = 0;
 		
 	}
+    
 
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D collision)
@@ -28,16 +29,15 @@ public class pisteet : MonoBehaviour {
 
         if (collision.gameObject.tag == "kotilo")
         {
-            if (kotiloaika < 2)
-            {
-                return;
-            }
+            
+           
             if (kotiloaika == 2)
             {
                 points += 50;
                 Debug.Log(points);
                 Destroy(collision.gameObject);
             }
+            return;
          }
 
    }
