@@ -67,9 +67,9 @@ public class WaveMovement : MonoBehaviour {
         {
             Dictionary<string, int> items = new Dictionary<string, int>()
             {
-                { "unused/boot", 5 },
-                { "unused/poop", 10 },
-                { "unused/fish", 3 },
+                { "unused/boot", 2 },
+                { "unused/poop", 3 },
+                { "unused/fish", 1 },
             };
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
