@@ -20,9 +20,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4201424702457210}
   - component: {fileID: 212036825034062208}
+<<<<<<< HEAD
   - component: {fileID: 114735542241117422}
   - component: {fileID: 60431059129100700}
   - component: {fileID: 114497005275261164}
+=======
+  - component: {fileID: 60431059129100700}
+  - component: {fileID: 114137180417069156}
+  - component: {fileID: 114345005183270946}
+>>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
   m_Layer: 0
   m_Name: ananas
   m_TagString: ananas
@@ -87,7 +93,11 @@ PolygonCollider2D:
       - {x: -35, y: -49}
       - {x: -22, y: -46}
       - {x: -1, y: -41}
+<<<<<<< HEAD
 --- !u!114 &114497005275261164
+=======
+--- !u!114 &114137180417069156
+>>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,8 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
+<<<<<<< HEAD
   timeToEat: 0
 --- !u!114 &114735542241117422
+=======
+  timeToEat: 0.5
+--- !u!114 &114345005183270946
+>>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,11 +123,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183368325027146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bbf880baebcf984ab79ebcc1808bed4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5742c278a570be845bf99443aa828496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   kotiloaika: 0
   points: 0
+=======
+  isOneWaveItem: 0
+>>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
 --- !u!212 &212036825034062208
 SpriteRenderer:
   m_ObjectHideFlags: 1

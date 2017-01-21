@@ -13,17 +13,19 @@ public class WaveMovement : MonoBehaviour {
 	private bool waveDirectionFlag;
     private bool spawnedItems;
 	private GameObject foam;
+    private bool dontSpawn;
 
 	/// <summary>
 	/// Call this when you want to do a wave. Attatch this to a wave-gameobject
 	/// </summary>
 	/// <param name="Length">Length of the wave. float between 0 and 1.</param>
-	public void DoTheWave(float length){
+	public void DoTheWave(float length, bool noSpawn){
 		SetDefaults ();
 		waveLength = length;
 		waving = true;
 		startTime = Time.time;
         spawnedItems = false;
+        dontSpawn = noSpawn;
 	}
 
 	// Use this for initialization
@@ -74,7 +76,7 @@ public class WaveMovement : MonoBehaviour {
 			SetDefaults ();
 		}
 
-        if (waveTime > 0.5f && !spawnedItems)
+        if (waveTime > 0.5f && !spawnedItems && !dontSpawn)
         {
             Item[] oneWaveItems = FindObjectsOfType<Item>();
             foreach (Item obstacle in oneWaveItems)
@@ -87,6 +89,7 @@ public class WaveMovement : MonoBehaviour {
                 { "ananas", 5 },
                 { "kotilo", 1 },
                 { "kenkä", 1 },
+                { "sixpack", Random.value < 0.3f ? 1 : 0}
             };
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;

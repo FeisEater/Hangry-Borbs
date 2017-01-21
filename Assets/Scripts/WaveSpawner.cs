@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour {
 	void Update () {
 		if (nextWave <= 0) {
 			var wm = wave.GetComponent<WaveMovement> ();
-            wm.DoTheWave(Random.Range(minWaveLength, maxWaveLength));
+            wm.DoTheWave(Random.Range(minWaveLength, maxWaveLength), combo > 0);
             nextWave = SetNextWave();
 		}
         else
@@ -42,14 +42,14 @@ public class WaveSpawner : MonoBehaviour {
         if (combo > 0)
         {
             combo--;
-            return 1.5f;
+            return 2f;
         }
         bool doCombo = Random.value < comboProbability;
         if (doCombo && !lastWaveWasCombo)
         {
             combo = Random.Range(minCombo, maxCombo + 1) - 2;
             lastWaveWasCombo = true;
-            return 1.5f;
+            return 2f;
         }
         lastWaveWasCombo = false;
         return Random.Range(minWaveTime, maxWaveTime);
