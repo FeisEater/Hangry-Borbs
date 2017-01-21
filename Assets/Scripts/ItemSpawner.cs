@@ -14,10 +14,8 @@ public class ItemSpawner {
                     float x = Random.Range(left, right);
                     float y = Random.Range(bottom, top);
                     bool validPosition = true;
-                    //Use some other collection later
-                    foreach (GameObject other in GameObject.FindGameObjectsWithTag("Item"))
+                    foreach (Item other in Object.FindObjectsOfType<Item>())
                     {
-                        //Rely on collider rather than on spriterenderer later
                         Bounds placedItemsBounds = new Bounds(new Vector3(x, y, 1), new Vector3(64, 64, 0.1f));
                         if (other.GetComponent<SpriteRenderer>().bounds.Intersects(placedItemsBounds))
                         {

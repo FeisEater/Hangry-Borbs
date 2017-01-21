@@ -15,6 +15,7 @@ public class Borb : MonoBehaviour {
     public float collisionStunTime;
     public float waveWashStunTime;
 
+    [HideInInspector] public int points;
     private bool clockwise;
     private string keyName;
     private bool stunned;
@@ -26,10 +27,12 @@ public class Borb : MonoBehaviour {
         clockwise = true;
         keyName = "Player" + playerId;
         stunned = false;
+        points = 0;
     }
 
     // Update is called once per frame
     void Update () {
+        GetComponent<Rigidbody2D>().angularVelocity = 0;
         if (curStunTime > 0)
         {
             curStunTime -= Time.deltaTime;
@@ -37,7 +40,6 @@ public class Borb : MonoBehaviour {
         else
         {
             stunned = false;
-            GetComponent<Rigidbody2D>().angularVelocity = 0;
         }
         HandleButton();
         CheckBorder();
@@ -114,10 +116,17 @@ public class Borb : MonoBehaviour {
             coll.rigidbody.AddForce((coll.transform.position - transform.position).normalized * force, ForceMode2D.Impulse);
 		} 
 		else if (coll.gameObject.tag == "Obstacle"){
-			float force = collisionForce;
-			force = ramForce;
-			gameObject.GetComponent<Rigidbody2D>().AddForce(
+			float force = ramForce;
+            stunned = true;
+            if (curStunTime < collisionStunTime)
+                curStunTime = collisionStunTime;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(
 				(Vector2)(transform.position - coll.transform.position).normalized * force, ForceMode2D.Impulse);
 		}
+    }
+
+    public bool CanEat()
+    {
+        return stopped && !stunned;
     }
 }

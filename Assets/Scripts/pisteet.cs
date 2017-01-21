@@ -5,7 +5,7 @@ using UnityEngine;
 public class pisteet : MonoBehaviour {
 
     public int kotiloaika;
-    public int points;
+    [HideInInspector] public int points;
     
 
     // Use this for initialization
