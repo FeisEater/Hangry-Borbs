@@ -9,6 +9,7 @@ public class WaveMovement : MonoBehaviour {
 	private float startTime;
 	private bool waving;
 	private bool waveDirectionFlag;
+    private bool spawnedItems;
 
 	/// <summary>
 	/// Call this when you want to do a wave. Attatch this to a wave-gameobject
@@ -19,6 +20,7 @@ public class WaveMovement : MonoBehaviour {
 		waveLength = length;
 		waving = true;
 		startTime = Time.time;
+        spawnedItems = false;
 	}
 
 	// Use this for initialization
@@ -41,9 +43,8 @@ public class WaveMovement : MonoBehaviour {
 	void FixedUpdate () {
 		if (waving) {
 			float y = GetWavePosition ();
-			gameObject.transform.Translate (new Vector3 (0, -y, 0));	
+			gameObject.transform.Translate (new Vector3 (0, -y, 0));
 		}
-        TestSpawn();
 	}
 
 	//calculates the y-position of the wave-gameobject
@@ -61,12 +62,8 @@ public class WaveMovement : MonoBehaviour {
 			pos = 0;
 			SetDefaults ();
 		}
-		return pos;
-	}
 
-    void TestSpawn()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (waveTime > 0.5f && !spawnedItems)
         {
             Dictionary<string, int> items = new Dictionary<string, int>()
             {
@@ -74,7 +71,9 @@ public class WaveMovement : MonoBehaviour {
                 { "unused/poop", 10 },
                 { "unused/fish", 3 },
             };
-            ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - 256, items);
+            ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
+            spawnedItems = true;
         }
-    }
+        return pos;
+	}
 }

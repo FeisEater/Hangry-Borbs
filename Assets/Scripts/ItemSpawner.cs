@@ -15,11 +15,11 @@ public class ItemSpawner {
                     float y = Random.Range(bottom, top);
                     bool validPosition = true;
                     //Use some other collection later
-                    foreach (SpriteRenderer other in GameObject.FindObjectsOfType<SpriteRenderer>())
+                    foreach (GameObject other in GameObject.FindGameObjectsWithTag("Item"))
                     {
                         //Rely on collider rather than on spriterenderer later
-                        Bounds placedItemsBounds = new Bounds(new Vector3(x, y, 0), new Vector3(64, 64, 0.1f));
-                        if (other.bounds.Intersects(placedItemsBounds))
+                        Bounds placedItemsBounds = new Bounds(new Vector3(x, y, 1), new Vector3(64, 64, 0.1f));
+                        if (other.GetComponent<SpriteRenderer>().bounds.Intersects(placedItemsBounds))
                         {
                             validPosition = false;
                             break;
@@ -27,7 +27,7 @@ public class ItemSpawner {
                     }
                     if (validPosition)
                     {
-                        GameObject.Instantiate(Resources.Load(type), new Vector3(x, y, 0), Quaternion.identity);
+                        Object.Instantiate(Resources.Load(type), new Vector3(x, y, 1), Quaternion.identity);
                         break;
                     }
                 }
