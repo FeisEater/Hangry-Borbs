@@ -32,11 +32,8 @@ public class Borb : MonoBehaviour {
         keyName = "Player" + playerId;
         stunned = false;
         points = 0;
-<<<<<<< HEAD
         Scoretext.text = "testi";
-=======
         dontCollide = false;
->>>>>>> 3a901adac2a59e15c30c95d09de377ab5a54a2ad
     }
 
     // Update is called once per frame
