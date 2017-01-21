@@ -5,22 +5,39 @@ using UnityEngine;
 public class WaveMovement : MonoBehaviour {
 	
 	public float waveSpeed;
+	public float waveLength;
 	private float startTime;
 	private bool waving;
 	private bool waveDirectionFlag;
 
+	/// <summary>
+	/// Call this when you want to do a wave. Attatch this to a wave-gameobject
+	/// </summary>
+	/// <param name="length of the wave. float between 0 and 1.">Length.</param>
+	public void DoTheWave(float length){
+		SetDefaults ();
+		waveLength = length;
+		waving = true;
+		startTime = Time.time;
+	}
+
 	// Use this for initialization
 	void Start () {
-		//init defaults
+		SetDefaults ();
+	}
+
+	//sets default values
+	private void SetDefaults(){
 		if (waveSpeed == 0) {
 			waveSpeed = 3;
 		}
 		startTime = 0;
-		waving = true;
+		waving = false;
 		waveDirectionFlag = true;
+		waveLength = 1;
+		gameObject.transform.position = new Vector3 (0, 1080, 0);
 	}
-	
-	// Update is called once per frame
+
 	void FixedUpdate () {
 		if (waving) {
 			float y = GetWavePosition ();
@@ -28,21 +45,21 @@ public class WaveMovement : MonoBehaviour {
 		}
 	}
 
-	void DoTheWave(){
-		waving = true;
-	}
-
-	float GetWavePosition(){
+	//calculates the y-position of the wave-gameobject
+	float GetWavePosition(){		
 		float waveTime = Time.time - startTime;
-		float pos = Mathf.Sin(waveTime * waveSpeed) * 10.8f * waveSpeed;
+		float length = 10.8f * waveLength;
+		float modifier = Mathf.Sin (waveTime * waveSpeed);
+
+		float pos = modifier * length * waveSpeed;
+
 		if (pos < 0) {
 			waveDirectionFlag = false;
 		}
 		if (waveDirectionFlag == false && pos > 0) {
 			pos = 0;
-			waving = false;
+			SetDefaults ();
 		}
-		Debug.Log (pos);
 		return pos;
 	}
 }
