@@ -85,9 +85,11 @@ public class WaveMovement : MonoBehaviour {
             ItemSpawner.SpawnItems(0, 1920, 1080, 1080 - waveLength * 1080, items);
             spawnedItems = true;
 
-			GameObject[] oneWaveItems = GameObject.FindGameObjectsWithTag("OneWaveItem");
+			GameObject[] oneWaveItems = GameObject.FindGameObjectsWithTag("Obstacle");
 			for (int i = 0; i < oneWaveItems.Length; i++) {
-				oneWaveItems [i].GetComponent<Item> ().DestroyThisItem ();
+				if (oneWaveItems [i].GetComponent<Item> ().isOneWaveItem) {
+					Destroy (oneWaveItems [i]);
+				}
 			}
         }
         return -pos;

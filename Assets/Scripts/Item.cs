@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour {
+	public bool isOneWaveItem = false;
     private float time;
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,4 @@ public class Item : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.white, time);
         }
     }
-	public void DestroyThisItem(){
-		Destroy (gameObject);
-	}
 }
