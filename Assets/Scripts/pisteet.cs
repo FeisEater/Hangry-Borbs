@@ -16,14 +16,15 @@ public class pisteet : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.tag == "ananas") {
-            points +=  10;
+        if (collision.gameObject.tag == "ananas")
+        {
+            points += 10;
+            Debug.Log(points);
+            Destroy(collision.gameObject);
         }
-        Destroy(other.gameObject);
-        Debug.Log(points);
-    }
+   }
 
     private void Update()
     {
