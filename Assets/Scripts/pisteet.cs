@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pisteet : MonoBehaviour {
 
-    
+    public float kotiloaika;
     public int points;
  
 
@@ -20,10 +20,23 @@ public class pisteet : MonoBehaviour {
     {
         if (collision.gameObject.tag == "ananas")
         {
+
             points += 10;
             Debug.Log(points);
             Destroy(collision.gameObject);
         }
+
+        while (collision.gameObject.tag == "kotilo")
+        {
+
+            if (kotiloaika == 2)
+            {
+                points += 50;
+                Debug.Log(points);
+                Destroy(collision.gameObject);
+            }
+         }
+
    }
 
     private void Update()
