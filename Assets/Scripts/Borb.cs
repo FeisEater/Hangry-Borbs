@@ -12,7 +12,8 @@ public class Borb : MonoBehaviour {
     public float bottomBorder;
     public float collisionForce;
     public float ramForce;
-    public float stunTime;
+    public float collisionStunTime;
+    public float waveWashStunTime;
 
     private bool clockwise;
     private string keyName;
@@ -40,6 +41,7 @@ public class Borb : MonoBehaviour {
         }
         HandleButton();
         CheckBorder();
+        CheckWave();
     }
 
     void HandleButton()
@@ -85,6 +87,17 @@ public class Borb : MonoBehaviour {
         }
     }
 
+    void CheckWave()
+    {
+        GameObject wave = FindObjectOfType<WaveMovement>().gameObject;
+        if (wave.transform.position.y < transform.position.y && !stunned)
+        {
+            stunned = true;
+            curStunTime = waveWashStunTime;
+            GetComponent<Rigidbody2D>().velocity = Vector2.down * 3.5f * transform.position.y;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
@@ -93,7 +106,8 @@ public class Borb : MonoBehaviour {
             if (!coll.gameObject.GetComponent<Borb>().stopped)
             {
                 stunned = true;
-                curStunTime = stunTime;
+                if (curStunTime < collisionStunTime)
+                    curStunTime = collisionStunTime;
             }
             else
                 force = ramForce;
