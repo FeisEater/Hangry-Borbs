@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4201424702457210}
   - component: {fileID: 212036825034062208}
   - component: {fileID: 50646657091924164}
-  - component: {fileID: 60431059129100700}
   - component: {fileID: 114227671495977954}
+  - component: {fileID: 60387858541192872}
   m_Layer: 0
   m_Name: ananas
   m_TagString: ananas
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1183368325027146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 700, y: 422, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 689.11743, y: 519.3895, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60431059129100700
+--- !u!60 &60387858541192872
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -72,41 +72,41 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 7, y: -39}
-      - {x: 28, y: -36}
-      - {x: 37, y: -33}
-      - {x: 63, y: -28}
-      - {x: 71, y: -22}
-      - {x: 71, y: 6}
-      - {x: 66, y: 21}
-      - {x: 62, y: 30}
-      - {x: 45, y: 47}
-      - {x: 29, y: 53}
-      - {x: 26, y: 54}
-      - {x: 22, y: 54}
-      - {x: 14, y: 55}
-      - {x: 2, y: 61}
-      - {x: -4, y: 62}
-      - {x: -11, y: 61}
-      - {x: -16, y: 63}
-      - {x: -24, y: 63}
-      - {x: -38, y: 55}
-      - {x: -44, y: 48}
-      - {x: -50, y: 36}
-      - {x: -65, y: -21}
-      - {x: -66, y: -37}
-      - {x: -66, y: -51}
-      - {x: -64, y: -53}
-      - {x: -56, y: -53}
-      - {x: -47, y: -52}
-      - {x: -35, y: -49}
-      - {x: -22, y: -46}
-      - {x: -1, y: -41}
+    - - {x: 4.666667, y: -26}
+      - {x: 18.666668, y: -24}
+      - {x: 24.666668, y: -22}
+      - {x: 42, y: -18.666668}
+      - {x: 47.333336, y: -14.666667}
+      - {x: 47.333336, y: 4}
+      - {x: 44, y: 14}
+      - {x: 41.333336, y: 20}
+      - {x: 30, y: 31.333334}
+      - {x: 19.333334, y: 35.333336}
+      - {x: 17.333334, y: 36}
+      - {x: 14.666667, y: 36}
+      - {x: 9.333334, y: 36.666668}
+      - {x: 1.3333334, y: 40.666668}
+      - {x: -2.6666667, y: 41.333336}
+      - {x: -7.3333335, y: 40.666668}
+      - {x: -10.666667, y: 42}
+      - {x: -16, y: 42}
+      - {x: -25.333334, y: 36.666668}
+      - {x: -29.333334, y: 32}
+      - {x: -33.333336, y: 24}
+      - {x: -43.333336, y: -14}
+      - {x: -44, y: -24.666668}
+      - {x: -44, y: -34}
+      - {x: -42.666668, y: -35.333336}
+      - {x: -37.333336, y: -35.333336}
+      - {x: -31.333334, y: -34.666668}
+      - {x: -23.333334, y: -32.666668}
+      - {x: -14.666667, y: -30.666668}
+      - {x: -0.6666667, y: -27.333334}
 --- !u!114 &114227671495977954
 MonoBehaviour:
   m_ObjectHideFlags: 1
