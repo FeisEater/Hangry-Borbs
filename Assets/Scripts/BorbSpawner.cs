@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class BorbSpawner : MonoBehaviour {
@@ -22,6 +23,8 @@ public class BorbSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
 		//handle error if no data manager in scene
 		bool[] activePlayers;
 		try{
