@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4201424702457210}
   - component: {fileID: 212036825034062208}
   - component: {fileID: 50646657091924164}
-  - component: {fileID: 114735542241117422}
   - component: {fileID: 60431059129100700}
+  - component: {fileID: 114227671495977954}
   m_Layer: 0
   m_Name: ananas
   m_TagString: ananas
@@ -107,7 +107,7 @@ PolygonCollider2D:
       - {x: -35, y: -49}
       - {x: -22, y: -46}
       - {x: -1, y: -41}
---- !u!114 &114735542241117422
+--- !u!114 &114227671495977954
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,11 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183368325027146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bbf880baebcf984ab79ebcc1808bed4, type: 3}
+  m_Script: {fileID: 11500000, guid: a46f7201560913f488592a54e4cfd2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kotiloaika: 0
-  points: 0
+  points: 10
+  timeToEat: 0.5
 --- !u!212 &212036825034062208
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f41903401c0b3f3458e517d37c6bebcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
