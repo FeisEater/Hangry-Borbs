@@ -25,6 +25,7 @@ public class Food : MonoBehaviour {
         if (timeToEat < 0)
         {
             player.points += points;
+            
             Destroy(gameObject);
         }
     }
