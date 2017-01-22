@@ -56,7 +56,7 @@ public class Borb : MonoBehaviour {
         CheckBorder();
         CheckWave();
 		if (scoreText != null) {
-			scoreText.text = playerId + "'s score: " + points;
+			//scoreText.text = playerId + "'s score: " + points;
 		}
 
         scoreText.text = baseScoreText + points.ToString();
