@@ -60,6 +60,8 @@ public class Borb : MonoBehaviour {
 
     void HandleButton()
     {
+        //If we don't want the sprites to rotate, separate sprite to different gameObject and set it as child
+        transform.GetChild(0).rotation = Quaternion.identity;
         if (stunned)
             return;
         stopped = Input.GetButton(keyName);
