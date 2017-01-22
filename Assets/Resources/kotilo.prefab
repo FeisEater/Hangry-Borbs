@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212636250944311310}
   - component: {fileID: 60811706165483936}
   - component: {fileID: 114417738200269172}
+  - component: {fileID: 114551396025413772}
+  - component: {fileID: 114992396866212426}
   m_Layer: 0
   m_Name: kotilo
   m_TagString: kotilo
@@ -98,7 +100,7 @@ MonoBehaviour:
   timeToEat: 2
 --- !u!114 &114551396025413772
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574625020833778}
@@ -110,7 +112,7 @@ MonoBehaviour:
   crabProbability: 0.25
 --- !u!114 &114992396866212426
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574625020833778}
