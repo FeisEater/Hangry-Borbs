@@ -226,7 +226,7 @@ Prefab:
     - target: {fileID: 114520630470411384, guid: cd159ba0d75fd454c960a7a0349d50dd,
         type: 2}
       propertyPath: nextSceneIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd159ba0d75fd454c960a7a0349d50dd, type: 2}
@@ -809,6 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4db054eb7d8634b94af6354ea747d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goTo: 6
 --- !u!4 &1520229059
 Transform:
   m_ObjectHideFlags: 0

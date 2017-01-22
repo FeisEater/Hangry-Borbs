@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GoToCredits : MonoBehaviour {
 
+	public int goTo;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,6 +14,6 @@ public class GoToCredits : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Return))
-            Application.LoadLevel(5);
+			Application.LoadLevel(goTo);
     }
 }

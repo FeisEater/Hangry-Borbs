@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public float timeLeft;
+	public int goTo;
 
     public Text text;
 
@@ -20,7 +21,7 @@ public class Timer : MonoBehaviour {
             string idToKey = "_qazcbmkp";
             foreach (Borb plr in FindObjectsOfType<Borb>())
                 dm.scores.Add(idToKey[plr.playerId].ToString(), plr.points);
-            Application.LoadLevel(4);
+			Application.LoadLevel(goTo);
         }
     }
 }
