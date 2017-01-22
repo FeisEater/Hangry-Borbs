@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour {
             string idToKey = "_qazcbmkp";
             foreach (Borb plr in FindObjectsOfType<Borb>())
                 dm.scores.Add(idToKey[plr.playerId].ToString(), plr.points);
-            Application.LoadLevel(3);
+            Application.LoadLevel(4);
         }
     }
 }

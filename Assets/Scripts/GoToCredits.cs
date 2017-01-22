@@ -12,6 +12,6 @@ public class GoToCredits : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Return))
-            Application.LoadLevel(4);
+            Application.LoadLevel(5);
     }
 }
