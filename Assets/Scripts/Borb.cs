@@ -50,6 +50,7 @@ public class Borb : MonoBehaviour {
             stunned = false;
         }
         HandleButton();
+		//AlternativeHandleButton();
         CheckBorder();
         CheckWave();
 		if (scoreText != null) {
@@ -75,6 +76,17 @@ public class Borb : MonoBehaviour {
             clockwise = !clockwise;
         }
     }
+
+	void AlternativeHandleButton()
+	{
+		if (stunned)
+			return;
+		if (Input.GetButton(keyName)) {
+			transform.Rotate (Vector3.forward, -rotationSpeed * 2);
+		} else {
+			transform.Translate(Vector3.up * moveSpeed);
+		}
+	}
 
     void CheckBorder()
     {
