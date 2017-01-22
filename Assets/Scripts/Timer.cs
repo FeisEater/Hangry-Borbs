@@ -9,16 +9,18 @@ public class Timer : MonoBehaviour {
 
     public Text text;
 
-
-
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        text.text = "Time Left:" + Mathf.Round(timeLeft);
+        //text.text = "Time Left:" + Mathf.Round(timeLeft);
         if (timeLeft < 0)
         {
-            Debug.Log("GAMEOVER");
-            //Application.LoadLevel("gameOver");
+            DataManager dm = FindObjectOfType<DataManager>();
+            dm.scores = new Dictionary<string, int>();
+            string idToKey = "_qazcbmkp";
+            foreach (Borb plr in FindObjectsOfType<Borb>())
+                dm.scores.Add(idToKey[plr.playerId].ToString(), plr.points);
+            Application.LoadLevel(3);
         }
     }
 }
