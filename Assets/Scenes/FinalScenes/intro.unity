@@ -478,7 +478,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 15200000, guid: 17aa2082f571f634aa0bec99a0581386, type: 3}
+  m_Texture: {fileID: 15200000, guid: 58f14e5bcf2f9544a9c4dd93fb3cc2c6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309e2685660c0904d999db533b66f10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: 1
+  nextSceneIndex: 2
 --- !u!1 &1979323074
 GameObject:
   m_ObjectHideFlags: 0

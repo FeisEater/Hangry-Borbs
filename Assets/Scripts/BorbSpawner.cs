@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BorbSpawner : MonoBehaviour {
 
@@ -39,7 +40,11 @@ public class BorbSpawner : MonoBehaviour {
 				borbs [i] = (GameObject)Instantiate (Resources.Load ("Borbs/borb"+i));
 				borbs [i].GetComponent<Borb> ().playerId = i;
 				borbs [i].transform.position = spawnCoords [i];
+
+                borbs[i].GetComponent<Borb>().scoreText = GameObject.Find("score" + i).GetComponent<Text>();
+                borbs[i].GetComponent<Borb>().baseScoreText = i + "'s score: ";
 			}
+        
 		}
 	}
 }
