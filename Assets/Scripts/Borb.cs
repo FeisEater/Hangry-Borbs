@@ -15,7 +15,7 @@ public class Borb : MonoBehaviour {
     public float ramForce;
     public float collisionStunTime;
     public float waveWashStunTime;
-    public Text Scoretext;
+    public Text scoreText;
 
     [HideInInspector] public int points;
     private bool clockwise;
@@ -32,7 +32,9 @@ public class Borb : MonoBehaviour {
         keyName = "Player" + playerId;
         stunned = false;
         points = 0;
-        Scoretext.text = "testi";
+		if (scoreText != null) {
+			scoreText.text = "0";
+		}
         dontCollide = false;
     }
 
@@ -50,7 +52,9 @@ public class Borb : MonoBehaviour {
         HandleButton();
         CheckBorder();
         CheckWave();
-        Scoretext.text = playerId + "'s score: " + points;
+		if (scoreText != null) {
+			scoreText.text = playerId + "'s score: " + points;
+		}
     }
 
     void HandleButton()
