@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour {
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        //text.text = "Time Left:" + Mathf.Round(timeLeft);
+        text.text = "Time Left:" + Mathf.Round(timeLeft);
         if (timeLeft < 0)
         {
             DataManager dm = FindObjectOfType<DataManager>();

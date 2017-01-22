@@ -26,6 +26,19 @@ public class Borb : MonoBehaviour {
     [HideInInspector] public Vector3 storedOffset;
     [HideInInspector] public bool dontCollide;
 
+
+	//Sprites
+	public Sprite sprite1Borb;
+	public Sprite sprite2Borb;
+	public Sprite sprite3Borb;
+	public Sprite sprite4Borb;
+	private int currentSpriteIndex;
+	public Sprite[] borbSprites;
+	public Sprite borbPeck;
+	public Sprite borbStun;
+
+
+
 	// Use this for initialization
 	void Start () {
         clockwise = true;
@@ -36,10 +49,31 @@ public class Borb : MonoBehaviour {
 			scoreText.text = "0";
 		}
         dontCollide = false;
+
+		borbSprites = new Sprite[4]{
+			sprite1Borb,
+			sprite2Borb,
+			sprite3Borb,
+			sprite4Borb
+		};
     }
 
     // Update is called once per frame
     void Update () {
+		
+		//set sprite
+		currentSpriteIndex++;
+		if (currentSpriteIndex > 3) {
+			currentSpriteIndex = 0;
+		}
+		gameObject.GetComponentInChildren<SpriteRenderer> ().sprite = borbSprites [currentSpriteIndex];
+		if (stunned) {
+			gameObject.GetComponentInChildren<SpriteRenderer> ().sprite = borbStun;
+		} else if (stopped) {
+			gameObject.GetComponentInChildren<SpriteRenderer> ().sprite = borbPeck;
+		}
+		gameObject.GetComponentInChildren<SpriteRenderer> ().flipX = !(transform.rotation.eulerAngles.z > 0 && transform.rotation.eulerAngles.z < 180);
+
         GetComponent<Rigidbody2D>().angularVelocity = 0;
         if (curStunTime > 0)
         {

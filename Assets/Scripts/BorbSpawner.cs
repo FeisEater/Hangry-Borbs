@@ -36,7 +36,7 @@ public class BorbSpawner : MonoBehaviour {
 
 		for (int i = 1; i < activePlayers.Length; i++) {
 			if (activePlayers [i]) {
-				borbs [i] = (GameObject)Instantiate (Resources.Load ("Borb"));
+				borbs [i] = (GameObject)Instantiate (Resources.Load ("Borbs/borb"+i));
 				borbs [i].GetComponent<Borb> ().playerId = i;
 				borbs [i].transform.position = spawnCoords [i];
 			}

@@ -314,6 +314,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114858090958133478, guid: 10b6eb8b72dc2c648ad28a91b423ed48,
+        type: 2}
+      propertyPath: m_EffectDistance.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114992702530518074, guid: 10b6eb8b72dc2c648ad28a91b423ed48,
+        type: 2}
+      propertyPath: m_EffectDistance.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114992702530518074, guid: 10b6eb8b72dc2c648ad28a91b423ed48,
+        type: 2}
+      propertyPath: m_EffectDistance.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696378769737650, guid: 10b6eb8b72dc2c648ad28a91b423ed48,
+        type: 2}
+      propertyPath: timeLeft
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10b6eb8b72dc2c648ad28a91b423ed48, type: 2}
   m_IsPrefabParent: 0
