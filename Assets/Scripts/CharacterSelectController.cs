@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterSelectController : MonoBehaviour {
 
 	public int playersReady;
+	public int nextSceneIndex;
 
 	[HideInInspector]public GameObject playerQ;
 	[HideInInspector]public GameObject playerA;
@@ -15,6 +16,8 @@ public class CharacterSelectController : MonoBehaviour {
 	[HideInInspector]public GameObject playerK;
 	[HideInInspector]public GameObject playerP;
 	[HideInInspector]public GameObject spaceSprite;
+
+	[HideInInspector]private DataManager dataManager; 
 
 
 	public Sprite Players0;
@@ -106,6 +109,11 @@ public class CharacterSelectController : MonoBehaviour {
 		case 8: 
 			sr.sprite = Players8;
 			break;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Space) && playersReady != 0){
+			dataManager.numberOfPlayers = playersReady;
+			Application.LoadLevel(nextSceneIndex);
 		}
 
 	}
