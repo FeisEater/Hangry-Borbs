@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 92766777940518812}
   - component: {fileID: 124393869029210270}
   - component: {fileID: 81662974751305082}
-  - component: {fileID: 114140238262979690}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -92,24 +91,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1390366301868758}
   m_Enabled: 1
---- !u!114 &114140238262979690
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390366301868758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b1369073ee9e54199d08cb38d370d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxWaveTime: 10
-  minWaveTime: 5
-  comboProbability: 1
-  maxCombo: 4
-  minCombo: 2
-  minWaveLength: 0.2
-  maxWaveLength: 0.8
 --- !u!124 &124393869029210270
 Behaviour:
   m_ObjectHideFlags: 1

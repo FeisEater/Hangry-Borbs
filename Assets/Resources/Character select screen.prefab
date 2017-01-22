@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4401400218930572}
   - component: {fileID: 212736826522796204}
   m_Layer: 0
-  m_Name: BG-Burbs
+  m_Name: BG-Borbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1037,8 +1037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114153082467146262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1050,8 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114158148224467374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1063,8 +1069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114244071760116128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1076,8 +1085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114286675569199600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1089,8 +1101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114520630470411384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1103,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersReady: 0
+  nextSceneIndex: 1
   playerQ: {fileID: 0}
   playerA: {fileID: 0}
   playerZ: {fileID: 0}
@@ -1132,8 +1148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114786976044617886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1145,8 +1164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &114978508308724524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1158,8 +1180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e8397d7421e0c4581bf9c547ea8fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 0
   csController: {fileID: 0}
+  pitch: 1
+  activePlayer: 0
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!212 &212118887896021632
 SpriteRenderer:
   m_ObjectHideFlags: 1

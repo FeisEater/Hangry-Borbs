@@ -15,7 +15,7 @@ public class Borb : MonoBehaviour {
     public float ramForce;
     public float collisionStunTime;
     public float waveWashStunTime;
-    public Text Scoretext;
+    public Text scoreText;
 
     [HideInInspector] public int points;
     private bool clockwise;
@@ -32,15 +32,10 @@ public class Borb : MonoBehaviour {
         keyName = "Player" + playerId;
         stunned = false;
         points = 0;
-
-
-        Scoretext.text = "testi";
-
+		if (scoreText != null) {
+			scoreText.text = "0";
+		}
         dontCollide = false;
-
-        Scoretext.text = "testi";
-        dontCollide = false;
-
     }
 
     // Update is called once per frame
@@ -55,9 +50,12 @@ public class Borb : MonoBehaviour {
             stunned = false;
         }
         HandleButton();
+		//AlternativeHandleButton();
         CheckBorder();
         CheckWave();
-        Scoretext.text = playerId + "'s score: " + points;
+		if (scoreText != null) {
+			scoreText.text = playerId + "'s score: " + points;
+		}
     }
 
     void HandleButton()
@@ -78,6 +76,17 @@ public class Borb : MonoBehaviour {
             clockwise = !clockwise;
         }
     }
+
+	void AlternativeHandleButton()
+	{
+		if (stunned)
+			return;
+		if (Input.GetButton(keyName)) {
+			transform.Rotate (Vector3.forward, -rotationSpeed * 2);
+		} else {
+			transform.Translate(Vector3.up * moveSpeed);
+		}
+	}
 
     void CheckBorder()
     {

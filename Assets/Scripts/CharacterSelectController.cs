@@ -5,7 +5,9 @@ using UnityEngine;
 public class CharacterSelectController : MonoBehaviour {
 
 	public int playersReady;
+	public int nextSceneIndex;
 
+	//gameobjects
 	[HideInInspector]public GameObject playerQ;
 	[HideInInspector]public GameObject playerA;
 	[HideInInspector]public GameObject playerZ;
@@ -16,7 +18,9 @@ public class CharacterSelectController : MonoBehaviour {
 	[HideInInspector]public GameObject playerP;
 	[HideInInspector]public GameObject spaceSprite;
 
+	[HideInInspector]private DataManager dataManager; 
 
+	//Sprites
 	public Sprite Players0;
 	public Sprite Players1;
 	public Sprite Players2;
@@ -26,6 +30,8 @@ public class CharacterSelectController : MonoBehaviour {
 	public Sprite Players6;
 	public Sprite Players7;
 	public Sprite Players8;
+
+
 
 
 	// Use this for initialization
@@ -39,41 +45,51 @@ public class CharacterSelectController : MonoBehaviour {
 		playerK = GameObject.Find("letter_k");
 		playerP = GameObject.Find("letter_p");
 		spaceSprite = GameObject.Find("letter_space");
+		dataManager = GameObject.Find ("SceneHandler").GetComponent<DataManager> ();
 		playersReady = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		//change players active-state
 		if (Input.GetKeyDown (KeyCode.Q)) {
 			playerQ.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (1);
 		}
 
 		if (Input.GetKeyDown (KeyCode.A)) {
 			playerA.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (2);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.Z)) {
 			playerZ.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (3);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.C)) {
 			playerC.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (4);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.B)) {
 			playerB.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (5);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.M)) {
 			playerM.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (6);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.K)) {
 			playerK.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (7);
 		} 
 
 		if (Input.GetKeyDown (KeyCode.P)) {
 			playerP.GetComponent<KeyboardKey> ().SetPressed ();
+			dataManager.TooglePlayerActive (8);
 		}
 
 		SpriteRenderer sr = spaceSprite.GetComponent<SpriteRenderer> ();
@@ -108,6 +124,10 @@ public class CharacterSelectController : MonoBehaviour {
 			break;
 		}
 
+		//space pressed? change to the next scene
+		if (Input.GetKeyDown (KeyCode.Space) && playersReady != 0){
+			Application.LoadLevel(nextSceneIndex);
+		}
 	}
 
 	public void AddPlayerReady(){

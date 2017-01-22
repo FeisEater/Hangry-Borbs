@@ -12,23 +12,23 @@ public class WaveSpawner : MonoBehaviour {
     public float maxWaveLength;
 
     private float nextWave;
-    private int combo;
-    private bool lastWaveWasCombo;
+    //private int combo;
+    //private bool lastWaveWasCombo;
     private GameObject wave;
 
 	// Use this for initialization
 	void Start () {
 		SpawnWave ();
         nextWave = SetNextWave();
-        combo = 0;
-        lastWaveWasCombo = false;
+        //combo = 0;
+        //lastWaveWasCombo = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (nextWave <= 0) {
 			var wm = wave.GetComponent<WaveMovement> ();
-            wm.DoTheWave(Random.Range(minWaveLength, maxWaveLength), combo > 0);
+            wm.DoTheWave(Random.Range(minWaveLength, maxWaveLength), false);
             nextWave = SetNextWave();
 		}
         else
@@ -39,7 +39,7 @@ public class WaveSpawner : MonoBehaviour {
 
     float SetNextWave()
     {
-        if (combo > 0)
+        /*if (combo > 0)
         {
             combo--;
             return 2f;
@@ -51,7 +51,7 @@ public class WaveSpawner : MonoBehaviour {
             lastWaveWasCombo = true;
             return 2f;
         }
-        lastWaveWasCombo = false;
+        lastWaveWasCombo = false;*/
         return Random.Range(minWaveTime, maxWaveTime);
     }
 

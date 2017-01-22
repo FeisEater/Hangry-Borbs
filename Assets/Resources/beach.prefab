@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4281906745827274}
   - component: {fileID: 212899458077657920}
+  - component: {fileID: 114158983808962260}
+  - component: {fileID: 114705548565516488}
   m_Layer: 0
   m_Name: beach
   m_TagString: Untagged
@@ -40,6 +42,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114158983808962260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868336216222678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b1369073ee9e54199d08cb38d370d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWaveTime: 10
+  minWaveTime: 5
+  comboProbability: 1
+  maxCombo: 4
+  minCombo: 2
+  minWaveLength: 0.2
+  maxWaveLength: 0.8
+--- !u!114 &114705548565516488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868336216222678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c9c6159a351d449b5135c27b4de5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212899458077657920
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -71,7 +102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f8dd41e255d1dc340914de2e672fad4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09121727120606e419950d7ae5844474, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
