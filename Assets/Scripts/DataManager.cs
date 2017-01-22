@@ -12,6 +12,8 @@ public class DataManager : MonoBehaviour {
 
 	[HideInInspector] public bool[] activePlayers;// index 0 is unused. Player1's active state is in activePlayers[1].
 
+    [HideInInspector] public Dictionary<string, int> scores;
+
 	void Awake(){		
 		Object.DontDestroyOnLoad (gameObject);
 
@@ -27,4 +29,5 @@ public class DataManager : MonoBehaviour {
 		//activate/deactivate players
 		activePlayers [playerId] = !activePlayers [playerId];
 	}
+
 }
