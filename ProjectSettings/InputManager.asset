@@ -38,13 +38,13 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Player0
+    m_Name: Player1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: q
     altNegativeButton: 
-    altPositiveButton: mouse 0
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -58,9 +58,9 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: a
     altNegativeButton: 
-    altPositiveButton: mouse 1
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -74,7 +74,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left shift
+    positiveButton: z
     altNegativeButton: 
     altPositiveButton: mouse 2
     gravity: 1000
@@ -90,7 +90,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: c
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
