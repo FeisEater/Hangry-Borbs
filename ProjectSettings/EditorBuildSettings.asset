@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/Splash.unity
   - enabled: 1
+    path: Assets/Scenes/FinalScenes/MainMenu.unity
+  - enabled: 1
     path: Assets/Scenes/FinalScenes/intro.unity
   - enabled: 1
     path: Assets/Scenes/FinalScenes/Character select.unity
